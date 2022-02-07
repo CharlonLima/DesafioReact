@@ -11,6 +11,17 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    animation: fundoAnimado 10s ease-in-out alternate infinite;
+    background: linear-gradient(-45deg, #fb7deb, #6af56a, #ebaa6d, #70c7fa) no-repeat;
+    background-size: 300% 300%;
+}
+@keyframes fundoAnimado {
+    from{
+        background-position: 0% 50%;
+    }
+    to{
+        background-position: 100% 50%;
+    }
 }
 .texto{
     font-size: 2em;
@@ -22,12 +33,10 @@
 .cabecalho{
     width: 100%;
     height: 20%;
-    background: linear-gradient(#E0F7FA, #80DEEA, #E0F7FA);
 }
 .principal{
     width: 100%;
     height: 80%;
-    background: linear-gradient(#E0F7FA, #80DEEA, #E0F7FA);
     color: black;
     display: flex;
     flex-direction: column;
@@ -41,7 +50,6 @@
     display: flex;
     position: absolute;
     bottom: 0;
-    background:linear-gradient(#E0F7FA, #80DEEA, #E0F7FA);
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     justify-content: center;
@@ -52,8 +60,18 @@ font-family: Arial, Helvetica, sans-serif;
 color: black;
 font-size: clamp(0.5rem, 1.5vw, 2rem);
 align-items: center;
+animation: funAnima 1s ease-in-out infinite;
+border-radius: 10px;
+}
+@keyframes funAnima {
+    from{
+        background-color: white;
+    }
+    to{
+        background-color: rgb(216, 132, 21);
+    }
 }
 #desafio:hover{
-    background: linear-gradient(#90A4AE, #B0BEC5, #90A4AE);
+    animation: funAnima 0.5s ease-in-out infinite;
     border-radius: 10px;
 }
